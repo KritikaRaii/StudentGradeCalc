@@ -243,7 +243,24 @@ public class Grade_Calculator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
+        //Initialise variables
+        int s_id = Integer.parseInt(jTextField1.getText());
+        String s_name = jTextField2.getText();
+        String s_sec = jTextField7.getText();
+        double phy = Double.parseDouble(jTextField3.getText());
+        double chem = Double.parseDouble(jTextField4.getText());
+        double maths = Double.parseDouble(jTextField8.getText());
+        double eng = Double.parseDouble(jTextField9.getText());
+        
+        //calculate total marks 
+        double total = phy + chem +maths +eng;
+        jTextField5.setText("" + total);
+        
+        //calculate percentage
+        double per = (total/400)*100;
+        jTextField10.setText(""+ per);
+        String grade = null;
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
